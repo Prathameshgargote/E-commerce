@@ -1,0 +1,62 @@
+<!-- <div class="card product-card shadow-sm rounded-lg">
+  <div class="position-relative">
+    <span class="badge badge-danger discount-badge">
+      -{{ 40 }}%
+    </span>
+    <img [src]="product.images" class="card-img-top p-3" alt="{{ product.title }}">
+    <div class="action-icons">
+      <button mat-icon-button><mat-icon>favorite_border</mat-icon></button>
+      <button mat-icon-button><mat-icon>visibility</mat-icon></button>
+    </div>
+  </div>
+
+  <div class="card-body text-center">
+    <h5 class="card-title mb-2">{{ product.title }}</h5>
+    <div class="price">
+      <span class="text-danger font-weight-bold">${{ product.total_price }}</span>
+      <span class="text-muted ml-1"><s>${{ product.total_price}}</s></span>
+    </div>
+    <div class="ratings mt-1">
+      <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+        <mat-icon color="warn" fontIcon="star" *ngIf="i < product.rating"></mat-icon>
+        <mat-icon color="warn" fontIcon="star_border" *ngIf="i >= product.rating"></mat-icon>
+      </ng-container>
+      <span class="text-muted ml-1">({{ product.reviews_count }})</span>
+    </div>
+  </div>
+</div>
+ -->
+
+<div class="product_card mt-5">
+  <div class="card">
+    <div class="card-img">
+      <img [src]="product.images" alt="" />
+    </div>
+  </div>
+  <div class="card_detail">
+    <h2 class="prod_title mt-2">{{ product.title }}</h2>
+    <h2 class="text-danger">{{ product.total_price }}</h2>
+    <div class="ratings">
+      <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+        <mat-icon
+          class="star"
+          fontIcon="star"
+          *ngIf="i < product.rating"
+        ></mat-icon>
+        <mat-icon
+          *ngIf="product.rating >= star - 0.5 && product.rating < star"
+          class="star"
+          >star_half</mat-icon
+        >
+        <mat-icon
+          class="star"
+          fontIcon="star_border"
+          *ngIf="i >= product.rating"
+        ></mat-icon>
+      </ng-container>
+      <div class="reviews">
+        <span class="text-muted">({{ product.reviews_count }})</span>
+      </div>
+    </div>
+  </div>
+</div>

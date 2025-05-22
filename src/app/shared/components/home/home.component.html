@@ -1,0 +1,41 @@
+<mat-divider></mat-divider>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="list">
+        <ul style="list-style: none">
+          <li>Woman’s Fashion</li>
+          <li>Men’s Fashion</li>
+          <li>Electronics</li>
+          <li>Home & Lifestyle</li>
+          <li>Medicine</li>
+          <li>Sports & Outdoor</li>
+          <li>Baby’s & Toys</li>
+          <li>Groceries & Pets</li>
+          <li>Health & Beauty</li>
+        </ul>
+      </div>
+      <mat-divider [vertical]="true"></mat-divider>
+    </div>
+
+    <div class="col-md-9">
+      <app-carousel></app-carousel>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- <app-countdown-timer [endTime]="product.saleEndTime"></app-countdown-timer> -->
+      <app-countdown-timer
+        [endTime]="'2025-05-25T23:59:59'"
+      ></app-countdown-timer>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let product of productArr">
+        <app-card [product]="product"></app-card>
+      </div>
+    </div>
+  </div>
+</div>

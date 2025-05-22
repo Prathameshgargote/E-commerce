@@ -1,0 +1,73 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar mt-4">
+        <div class="logo">Exclusive</div>
+
+        <ul class="nav-links m-0">
+          <li><a routerLink="home" routerLinkActive="active">Home</a></li>
+          <li><a>Contact</a></li>
+          <li><a>About</a></li>
+          <li><a routerLink="auth" routerLinkActive="active">Sign Up</a></li>
+        </ul>
+
+        <div class="search-container d-flex">
+          <input type="text" placeholder="What are you looking for?" />
+          <mat-icon>search</mat-icon>
+        </div>
+        <div class="icons">
+          <mat-icon>favorite_boaderd</mat-icon>
+          <mat-icon class="icon-bordered">shopping_cart</mat-icon>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div> -->
+<nav class="navbar navbar-expand-sm navbar-light bg-white px-5 py-3 pt-4">
+  <a class="navbar-brand fw-bold" routerLink="home" routerLinkActive="active"><strong>Exclusive</strong></a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    (click)="isNavbarCollapsed = !isNavbarCollapsed"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse"
+    [ngClass]="{ show: !isNavbarCollapsed }"
+  >
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link ml-4 textDark" routerLink="home" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link ml-4 textDark" routerLink="contact" routerLinkActive="active">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link ml-4 textDark" routerLink="about" routerLinkActive="active">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link ml-4 textDark" routerLink="signin" routerLinkActive="active">Sign In</a>
+      </li>
+    </ul>
+
+    <div class="search-wrapper d-flex align-items-center">
+      <input
+        type="text"
+        class="form-control exclusiveSearch border-0 shadow-none"
+        placeholder="What are you looking for?"
+      />
+      <span class="material-icons search-icon">search</span>
+    </div>
+    <div class="icons d-flex align-items-center">
+        <div class="fav ml-2 d-flex align-items-center">
+            <mat-icon>favorite_border</mat-icon> 
+        </div>
+        <div class="cart ml-2 d-flex align-items-center">
+            <mat-icon>shopping_cart</mat-icon>
+        </div>
+    </div>
+  </div>
+</nav>

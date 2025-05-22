@@ -1,0 +1,45 @@
+// .list {
+//   display: flex;
+//   justify-content: center;
+//   ul {
+//     li {
+//       margin: 30px;
+//       font-size: 20px;
+//     }
+//   }
+// }
+.list {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+ul li {
+  margin: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  //   padding: 8px 12px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.list ul li:hover {
+  background-color: #f0f0f0;
+  li {
+    height: 100%;
+    width: 100%;
+  }
+  /* Optional: change text color on hover */
+  border-radius: 4px; /* Optional: adds rounded corners */
+}
+
+.homeImg {
+  border:solid 2px red;
+ height: 500px;
+ .carousel-item{
+   
+   img{
+    object-fit: contain;
+    height: 100%;
+  }
+ }
+ 
+}

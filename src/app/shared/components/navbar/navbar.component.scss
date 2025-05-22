@@ -1,0 +1,113 @@
+// .navbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 1rem 2rem;
+//   background-color: white;
+//   border-bottom: 1px solid #eee;
+
+//   .logo {
+//     font-weight: 700;
+//     font-size: 24px;
+//   }
+
+//   .nav-links {
+//     display: flex;
+//     list-style: none;
+//     gap: 5rem;
+//     vertical-align: center;
+
+//     li a {
+//       text-decoration: none;
+//       color: black;
+//       font-weight: 400;
+//       font-size: 16px;
+
+//       &.active {
+//         text-decoration: underline;
+//       }
+
+//       &:hover {
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+
+//   .search-container {
+//     position: relative;
+
+//     input {
+//       padding: 0.5rem 1rem;
+//       border-radius: 6px;
+//       border: none;
+//       background-color: #f4f4f4;
+//       outline: none;
+//     }
+
+//     button {
+//       position: absolute;
+//       right: 8px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       background: transparent;
+//       border: none;
+//       cursor: pointer;
+
+//       i {
+//         font-size: 16px;
+//       }
+//     }
+//   }
+
+//   .icons {
+//     display: flex;
+//     gap: 1rem;
+//     i {
+//       font-size: 20px;
+//       cursor: pointer;
+//     }
+//   }
+// }
+
+// .container {
+//  box-shadow: none;
+// }
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(9, 9, 9, 0.9);
+    position: relative;
+    transition: all 0.8s ease-in-out;
+   
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #000;
+        height: 2px;
+        width: 100%;
+    }
+}
+
+.exclusiveSearch::placeholder{
+    font-size: 14px;
+}
+
+.search-wrapper {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 8px 12px;
+  width: 230px;
+  height: 30px;
+}
+
+.search-wrapper input {
+  background: transparent;
+  flex: 1;
+  outline: none;
+}
+
+.search-wrapper .search-icon {
+  color: #000;
+  font-size: 22px;
+  cursor: pointer;
+}
