@@ -1,0 +1,33 @@
+
+<div class="row">
+    <div class="col-md-10">
+      <!-- <app-countdown-timer [endTime]="product.saleEndTime"></app-countdown-timer> -->
+      <app-countdown-timer
+        [endTime]="'2025-05-25T23:59:59'"
+      ></app-countdown-timer>
+    </div>
+    <div class="col-md-2 d-flex align-items-center ">
+      <!-- flash-sales.component.html -->
+      <div class="flash-sale-wrapper text-right">
+        <button class="nav-btn" (click)="scrollLeft()">←</button>
+        <button class="nav-btn" (click)="scrollRight()">→</button>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="card-container" #scrollContainer>
+    <div class="col-md-3" *ngFor="let product of productArr">
+        <app-card [product]="product"></app-card>
+      </div>
+  </div>
+
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let product of productArr">
+        <app-card [product]="product"></app-card>
+      </div>
+    </div>
+  </div> -->

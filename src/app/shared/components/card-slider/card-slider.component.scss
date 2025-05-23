@@ -1,0 +1,26 @@
+
+.flash-sale-wrapper {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.nav-btn {
+  background-color: #eee;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.card-container {
+
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}

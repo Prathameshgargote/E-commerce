@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HomeService } from '../../services/home.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-carousel',
@@ -9,8 +10,33 @@ import { HomeService } from '../../services/home.service';
 export class CarouselComponent implements OnInit {
   imgArr: Array<any> = [];
   currentIndex = 0;
-
+  @ViewChild('carousel') carousel!: ElementRef;
   constructor(private _homeservice: HomeService) {}
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 700,
+    navText: ['‹', '›'],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 1,
+      },
+      740: {
+        items: 1,
+      },
+      940: {
+        items: 1,
+      },
+    },
+    nav: true,
+  };
 
   ngOnInit(): void {
     this.fetchallproject();

@@ -1,32 +1,122 @@
-// #homeIcarouselExampleIndicatorsmg {
-//   width: 100%;
-//   height: 500px;
-//   .carousel-inner {
-//     height: 500px;
-//     width: 100%;
-//     img {
-//       height: 100%;
-//       width: 100%;
-//       object-fit: cover;
-//     }
-//   }
+
+
+.sales{
+   display: flex;
+   align-items: center;
+  // padding: 20px; 
+}
+.flash{
+    padding: 20px;
+    font-weight: 600;
+    font-size: 35px;
+}
+.carousel {
+  height: 500px;
+  width: 80%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+.corouselcss{
+  border-left: 1px solid gray;
+}
+
+.carousel-inner img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.hover-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scrollArrow{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+//.arrow{
+//  color : black;
+//}
+.carousel-inner img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.owl-theme{
+  width: 100vh;
+  height: 180px;
+}
+.owl-theme{
+  img{
+    // width: 800px;
+    height: 450px;
+    object-fit: cover;
+  }
+}
+.corouselcss {
+  position: relative;
+}
+
+.corouselcss ::ng-deep .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.corouselcss ::ng-deep .owl-nav button.owl-prev,
+.corouselcss ::ng-deep .owl-nav button.owl-next {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.corouselcss ::ng-deep .owl-nav button.owl-prev {
+  margin-left: 10px;
+}
+
+.corouselcss ::ng-deep .owl-nav button.owl-next {
+  margin-right: 10px;
+}
+
+.corouselcss ::ng-deep .owl-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.corouselcss ::ng-deep .owl-dots .owl-dot span {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.corouselcss ::ng-deep .owl-dots .owl-dot.active span {
+  background: rgba(255, 255, 255, 1);
+}
+// .corouselcss ::ng-deep .owl-nav {
+//   display: none !important;
 // }
 
-#carouselExampleIndicators {
-  height: 500px;
-  margin: 50px;
-}
-
-#carouselExampleIndicators .carousel-inner {
-  height: 100%;
-}
-
-#carouselExampleIndicators .carousel-item {
-  height: 100%;
-}
-
-#carouselExampleIndicators img {
-  height: 100%;
-  object-fit: cover; /* Ensures image fills the space nicely */
-  width: 100%;
-}
+// .ownCarousal{
+//   img{
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }

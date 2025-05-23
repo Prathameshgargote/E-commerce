@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap;
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { CarouselComponent } from './shared/components/carousel/carousel.component';
 import { CountdownTimerComponent } from './shared/components/countdown-timer/countdown-timer.component';
 import { CardComponent } from './shared/components/card/card.component';
+import { CardSliderComponent } from './shared/components/card-slider/card-slider.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { CardComponent } from './shared/components/card/card.component';
     CarouselComponent,
     CountdownTimerComponent,
     CardComponent,
+    CardSliderComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { CardComponent } from './shared/components/card/card.component';
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
+    CarouselModule 
   ],
   providers: [],
   bootstrap: [AppComponent],

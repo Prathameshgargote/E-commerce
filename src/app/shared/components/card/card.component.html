@@ -27,12 +27,28 @@
 </div>
  -->
 
-<div class="product_card mt-5">
+<!-- <div class="product_card mt-5">
   <div class="card">
     <div class="card-img">
       <img [src]="product.images" alt="" />
     </div>
   </div>
+
+    <div class="add_cart text-center mt-2" >
+    <button 
+    class="btn btn-block"
+      matTooltip="Add to Cart"
+      matTooltipPosition="left"
+      (click)="addToCart()"
+       mat-raised-button
+      color="accent"
+      aria-label="Example icon button with a plus one icon"
+    >
+     Add to Cart
+      <mat-icon color="white">shopping_cart</mat-icon>
+    </button>
+  </div>
+
   <div class="card_detail">
     <h2 class="prod_title mt-2">{{ product.title }}</h2>
     <h2 class="text-danger">{{ product.total_price }}</h2>
@@ -59,4 +75,114 @@
       </div>
     </div>
   </div>
+
+  <div class="button_hover">
+    <button
+      matTooltip="visibility"
+      matTooltipPosition="left"
+      [routerLink]="product._id"
+      mat-mini-fab
+      color="basic"
+      aria-label="Example icon button with a plus one icon"
+    >
+      <mat-icon>visibility</mat-icon>
+    </button>
+
+    <button
+      matTooltip="Like"
+      matTooltipPosition="left"
+      (click)="toggleLike()"
+      mat-mini-fab
+      color="basic"
+      aria-label="Example icon button with a plus one icon"
+    >
+      <mat-icon
+        color="white"
+        [ngClass]="liked ? 'bi-heart-fill text-danger' : 'bi-heart'"
+        >favorite_bordered</mat-icon
+      >
+    </button>
+  </div>
+
+
+</div> -->
+<div class="product_card mt-5">
+  <div class="card position-relative">
+
+    <div class="card-img p-1">
+      <img [src]="product.images" alt="" />
+    </div>
+
+    <div class="add_cart text-center mt-1">
+      <button
+        class="btn btn-block"
+      
+        (click)="addToCart()"
+        mat-raised-button
+      
+        aria-label="Add to cart"
+      >
+        Add to Cart
+        <mat-icon color="white">shopping_cart</mat-icon>
+      </button>
+    </div>
+    
+     <div class="card_detail m-0 p-3">
+    <h2 class="prod_title m-0"   [matTooltip]="product.title"
+        matTooltipPosition="below">{{ product.title }}</h2>
+    <h2 class="text-danger m-0">{{ product.total_price }}</h2>
+    <div class="ratings m-0">
+      <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+        <mat-icon
+          class="star"
+          fontIcon="star"
+          *ngIf="i < product.rating"
+        ></mat-icon>
+        <mat-icon
+          *ngIf="product.rating >= star - 0.5 && product.rating < star"
+          class="star"
+          >star_half</mat-icon
+        >
+        <mat-icon
+          class="star"
+          fontIcon="star_border"
+          *ngIf="i >= product.rating"
+        ></mat-icon>
+      </ng-container>
+      <div class="reviews">
+        <span class="text-muted">({{ product.reviews_count }})</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="button_hover mb-0 ">
+    <button
+      matTooltip="visibility"
+      matTooltipPosition="left"
+      [routerLink]="product._id"
+      mat-mini-fab
+      color="basic"
+      aria-label="Example icon button with a plus one icon"
+    >
+      <mat-icon>visibility</mat-icon>
+    </button>
+
+    <button
+      matTooltip="Like"
+      matTooltipPosition="left"
+      (click)="toggleLike()"
+      mat-mini-fab
+      color="basic"
+      aria-label="Example icon button with a plus one icon"
+    >
+      <mat-icon
+        color="white"
+        [ngClass]="liked ? 'bi-heart-fill text-danger' : 'bi-heart'"
+        >favorite_bordered</mat-icon
+      >
+    </button>
+  </div>
+
+  </div>
+  
 </div>

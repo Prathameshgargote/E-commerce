@@ -1,4 +1,5 @@
 .flash-sale-timer {
+  margin: 20px auto;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -28,10 +29,28 @@
   margin-top: 0.5rem;
 }
 .sale_title{
+  margin: 20px auto;
     h2{
     color: #ef5b57;
     }
     h1{
         font-weight: bolder;
     }
+}
+
+
+.flash-sale-wrapper {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.nav-btn {
+  background-color: #eee;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 50%;
 }

@@ -15,16 +15,16 @@
           <li>Health & Beauty</li>
         </ul>
       </div>
-      <mat-divider [vertical]="true"></mat-divider>
+      <mat-divider [vertical]="true" class="m-0"></mat-divider>
     </div>
 
-    <div class="col-md-9">
+    <div class="col-md-9 px-3 mt-5">
       <app-carousel></app-carousel>
     </div>
   </div>
-  <div class="row">
+
+  <!-- <div class="row">
     <div class="col-md-12">
-      <!-- <app-countdown-timer [endTime]="product.saleEndTime"></app-countdown-timer> -->
       <app-countdown-timer
         [endTime]="'2025-05-25T23:59:59'"
       ></app-countdown-timer>
@@ -37,5 +37,15 @@
         <app-card [product]="product"></app-card>
       </div>
     </div>
+  </div> -->
+  <mat-divider></mat-divider>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <app-card-slider></app-card-slider>
+      </div>
+    </div>
   </div>
+
+  <app-footer></app-footer>
 </div>

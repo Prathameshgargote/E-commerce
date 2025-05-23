@@ -1,40 +1,27 @@
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li
-      *ngFor="let img of imgArr; let i = index"
-      [class.active]="i === 0"
-      data-target="#carouselExampleIndicators"
-      [attr.data-slide-to]="i"
-    ></li>
-  </ol>
+<!-- <div class="carousel_banner">
+  <owl-carousel-o #owlCar [options]="customOptions">
+    <ng-container *ngFor="let img of imgArr">
+      <ng-template carouselSlide>
+        <img [src]="img" alt="product" title="product"  class="carousel-image" />
+      
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div> -->
+<!-- <div class="carousel_banner">
+  <owl-carousel-o #owlCar [options]="customOptions">
+    <ng-container *ngFor="let img of imgArr">
+      <ng-template carouselSlide>
+        <img [src]="img" alt="product" title="product" class="carousel-image" />
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div> -->
 
-  <div class="carousel-inner">
-    <div
-      *ngFor="let img of imgArr; let i = index"
-      class="carousel-item"
-      [class.active]="i === 0"
-    >
-      <img [src]="img" class="d-block w-100" alt="Slide {{ i + 1 }}" />
-    </div>
-  </div>
-
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-target="#carouselExampleIndicators"
-    data-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </button>
-
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-target="#carouselExampleIndicators"
-    data-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </button>
-</div>
+<owl-carousel-o  [options]="customOptions"  class="owl-theme">
+  <ng-container *ngFor="let img of imgArr">
+    <ng-template carouselSlide>
+      <img [src]="img" alt="product" title="product" />
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
