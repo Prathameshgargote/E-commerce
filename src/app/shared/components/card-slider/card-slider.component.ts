@@ -8,7 +8,7 @@ import { HomeService } from '../../services/home.service';
 })
 export class CardSliderComponent implements OnInit {
   productArr: any;
-  @ViewChild('scrollContainer', { static: false }) scrollContainer!: ElementRef;
+  @ViewChild('scroller', { static: false }) scroller!: ElementRef;
   constructor(private _homeservice: HomeService) {}
 
   ngOnInit(): void {
@@ -23,14 +23,14 @@ export class CardSliderComponent implements OnInit {
   }
 
   scrollLeft() {
-    this.scrollContainer.nativeElement.scrollBy({
+    this.scroller.nativeElement.scrollBy({
       left: -320,
       behavior: 'smooth',
     });
   }
 
   scrollRight() {
-    this.scrollContainer.nativeElement.scrollBy({
+    this.scroller.nativeElement.scrollBy({
       left: 320,
       behavior: 'smooth',
     });

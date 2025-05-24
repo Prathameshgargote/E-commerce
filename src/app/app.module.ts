@@ -17,6 +17,7 @@ import { CountdownTimerComponent } from './shared/components/countdown-timer/cou
 import { CardComponent } from './shared/components/card/card.component';
 import { CardSliderComponent } from './shared/components/card-slider/card-slider.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CategoriesComponent } from './shared/components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     CountdownTimerComponent,
     CardComponent,
     CardSliderComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,

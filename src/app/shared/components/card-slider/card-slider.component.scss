@@ -16,11 +16,19 @@
 }
 
 .card-container {
-
   display: flex;
   overflow-x: hidden;
   scroll-behavior: smooth;
   width: 100%;
   gap: 1rem;
   padding: 1rem;
+}
+
+ .custom-red-button {
+  background-color: #e04b47;
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 12px 24px;
+  text-transform: none; /* Keep the text casing as-is */
 }

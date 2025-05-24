@@ -1,0 +1,29 @@
+<div class="catagory_dash">
+  <div class="row">
+    <div class="col-md-5">
+      <h2>Categories</h2>
+      <h1>Browse By Category</h1>
+    </div>
+    <div class="col-md-5"></div>
+    <div class="col-md-2 d-flex align-items-center">
+      <div class="flash-sale-wrapper text-right">
+        <button class="nav-btn" (click)="scrollLeft()">←</button>
+        <button class="nav-btn" (click)="scrollRight()">→</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="category-container" #catagoryscroller>
+    <div class="col-md-2" *ngFor="let cat of categories">
+      <mat-card
+        class="catagory_card"
+        [ngClass]="{ selected: cat.name === selectedCategory }"
+        (click)="selectCategory(cat.name)"
+      >
+        <mat-icon class="catagory_icon">{{ cat.icon }}</mat-icon>
+        <div class="label">{{ cat.name }}</div>
+      </mat-card>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+</div>
