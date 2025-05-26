@@ -9,21 +9,23 @@
   <div class="col-md-2 d-flex align-items-center">
     <!-- flash-sales.component.html -->
     <div class="flash-sale-wrapper text-right">
-      <button class="nav-btn" (click)="scrollLeft()">←</button>
-      <button class="nav-btn" (click)="scrollRight()">→</button>
+      <button class="nav-btn" (click)="scrollLeft()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button class="nav-btn" (click)="scrollRight()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
     </div>
   </div>
 </div>
 
-<div class="card-container" #scroller>
-  <div class="col-md-3" *ngFor="let product of productArr">
+<div class="card-container " #scroller>
+  <div class="col-md-3 p-0" *ngFor="let product of productArr">
     <app-card [product]="product"></app-card>
   </div>
 </div>
 
-
-
-<div class="container mb-5">
+<div class="container my-3">
   <div class="row">
     <div class="col-md-12 d-flex justify-content-center">
       <button mat-raised-button class="custom-red-button">

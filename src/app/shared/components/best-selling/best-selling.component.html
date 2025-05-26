@@ -1,8 +1,8 @@
-<div class="catagory_dash my-3">
+<div class="best_selling_dash my-3">
   <div class="row">
     <div class="col-md-5">
-      <h2>Categories</h2>
-      <h1>Browse By Category</h1>
+      <h2>This Month</h2>
+      <h1>Best Selling Products</h1>
     </div>
     <div class="col-md-5"></div>
     <div class="col-md-2 d-flex align-items-center">
@@ -17,17 +17,11 @@
     </div>
   </div>
 
-  <div class="category-container" #catagoryscroller>
-    <div class="col-md-2" *ngFor="let cat of categories">
-      <mat-card
-        class="catagory_card"
-        [ngClass]="{ selected: cat.name === selectedCategory }"
-        (click)="selectCategory(cat.name)"
-      >
-        <mat-icon class="catagory_icon">{{ cat.icon }}</mat-icon>
-        <div class="label">{{ cat.name }}</div>
-      </mat-card>
+  <div class="category-container" #scroller>
+    <div class="col-md-3" *ngFor="let product of productArr">
+      <app-card [product]="product"></app-card>
     </div>
   </div>
 </div>
+
 <mat-divider></mat-divider>

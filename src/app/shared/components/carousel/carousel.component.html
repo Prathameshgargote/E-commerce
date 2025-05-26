@@ -18,10 +18,10 @@
   </owl-carousel-o>
 </div> -->
 
-<owl-carousel-o  [options]="customOptions"  class="owl-theme">
+<owl-carousel-o  [options]="customOptions"  class="owl-theme ">
   <ng-container *ngFor="let img of imgArr">
     <ng-template carouselSlide>
-      <img [src]="img" alt="product" title="product" />
+      <img [src]="img" alt="product" title="product"  class="p-2"/>
     </ng-template>
   </ng-container>
 </owl-carousel-o>

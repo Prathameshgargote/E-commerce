@@ -18,6 +18,7 @@ import { CardComponent } from './shared/components/card/card.component';
 import { CardSliderComponent } from './shared/components/card-slider/card-slider.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CategoriesComponent } from './shared/components/categories/categories.component';
+import { BestSellingComponent } from './shared/components/best-selling/best-selling.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CategoriesComponent } from './shared/components/categories/categories.c
     CardComponent,
     CardSliderComponent,
     CategoriesComponent,
+    BestSellingComponent,
   ],
   imports: [
     BrowserModule,
