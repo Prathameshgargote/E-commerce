@@ -1,0 +1,48 @@
+<!-- <div
+  class="product-list"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="300"
+  (scrolled)="onScroll()"
+>
+  <div class="col-md-12" *ngIf="let prod of products">
+    <div class="card">
+      <div class="card-body">
+        {{ prod }}
+      </div>
+    </div>
+  </div>
+
+  <button
+    class="btn btn-info"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="300"
+    (click)="onScroll()"
+  >
+    scroll
+  </button>
+</div> -->
+
+<div
+  class="container"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="300"
+  (scrolled)="onScroll()"
+>
+
+<div class="row">
+  <div class="col-md-2" >
+    
+    <button mat-icon-button  routerLink="/home"
+    color="basic"><mat-icon  >arrow_back</mat-icon> Go To Home</button>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-3" *ngFor="let prod of products">
+      <app-card [product]="prod"></app-card>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,11 @@ export class CardSliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchallproject();
+this._homeservice.fetchAllProduct()
+.subscribe(res=>{
+
+})
+
   }
   fetchallproject() {
     this._homeservice.fetchAllProduct().subscribe((res) => {

@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<div class="card-container " #scroller>
+<div class="card-container" #scroller>
   <div class="col-md-3 p-0" *ngFor="let product of productArr">
     <app-card [product]="product"></app-card>
   </div>
@@ -28,7 +28,7 @@
 <div class="container my-3">
   <div class="row">
     <div class="col-md-12 d-flex justify-content-center">
-      <button mat-raised-button class="custom-red-button">
+      <button mat-raised-button class="custom-red-button" routerLink="/products">
         View All Products
       </button>
     </div>

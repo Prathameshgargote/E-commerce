@@ -9,13 +9,12 @@ import { Iproduct } from '../../model/product';
 })
 export class HomeComponent implements OnInit {
   constructor(private _homeservice: HomeService) {}
- productArr: Array<any> = [];
- 
+  productArr: Array<any> = [];
+  catagoryArr!: Array<string>;
+
   ngOnInit(): void {
-    this.fetchallproject()
-    
-    
-    
+    this.fetchallproject();
+    this.catagorylistArr();
   }
 
   fetchallproject() {
@@ -27,6 +26,23 @@ export class HomeComponent implements OnInit {
       //   return img.images[0];
       // });
       // console.log(this.imgArr);
+    });
+  }
+
+  catagorylistArr() {
+    this._homeservice.getAllcatgory().subscribe((res) => {
+      console.log(res);
+      const categorySet = new Set(res.map((p) => p.category));
+      this.catagoryArr = Array.from(categorySet);
+      console.log(this.catagoryArr);
+
+      // this.catData.push(this.allData.map((prod: any) => prod.category));
+      // console.log(this.allData);
+
+      // let list = this.catData.map((cat) => {
+      //   return cat.category;
+      // });
+      // console.log(list);
     });
   }
 }

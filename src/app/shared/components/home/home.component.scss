@@ -12,13 +12,14 @@
   display: flex;
   justify-content: center;
   margin: 30px;
-}
-ul li {
+  ul li {
   margin: 30px;
   font-size: 20px;
   cursor: pointer;
   //   padding: 8px 12px;
   transition: background-color 0.2s, color 0.2s;
+}
+
 }
 
 .list ul li:hover {

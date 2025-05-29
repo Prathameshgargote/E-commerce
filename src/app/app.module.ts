@@ -19,6 +19,8 @@ import { CardSliderComponent } from './shared/components/card-slider/card-slider
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CategoriesComponent } from './shared/components/categories/categories.component';
 import { BestSellingComponent } from './shared/components/best-selling/best-selling.component';
+import { ProductDashComponent } from './shared/components/product-dash/product-dash.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { BestSellingComponent } from './shared/components/best-selling/best-sell
     CardSliderComponent,
     CategoriesComponent,
     BestSellingComponent,
+    ProductDashComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,8 @@ import { BestSellingComponent } from './shared/components/best-selling/best-sell
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CarouselModule 
+    CarouselModule ,
+     InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,16 +3,22 @@
   <div class="row">
     <div class="col-md-3">
       <div class="list">
-        <ul style="list-style: none">
-          <li>Woman’s Fashion</li>
-          <li>Men’s Fashion</li>
+        <ul style="list-style: none" >
+          <li 
+          class="list_item"
+          [queryParams]="{ catagory: catagory }"
+          routerLink="/products"
+          *ngFor="let catagory of catagoryArr"
+          >{{catagory}}
+        </li>
+          <!-- <li>Men’s Fashion</li>
           <li>Electronics</li>
           <li>Home & Lifestyle</li>
           <li>Medicine</li>
           <li>Sports & Outdoor</li>
           <li>Baby’s & Toys</li>
           <li>Groceries & Pets</li>
-          <li>Health & Beauty</li>
+          <li>Health & Beauty</li> -->
         </ul>
       </div>
       <mat-divider [vertical]="true" class="m-0"></mat-divider>
