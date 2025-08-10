@@ -9,7 +9,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { MaterialModule } from './shared/material/material.module';
 import { AuthComponent } from './shared/components/auth/auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './shared/components/home/home.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { CarouselComponent } from './shared/components/carousel/carousel.component';
@@ -21,6 +21,7 @@ import { CategoriesComponent } from './shared/components/categories/categories.c
 import { BestSellingComponent } from './shared/components/best-selling/best-selling.component';
 import { ProductDashComponent } from './shared/components/product-dash/product-dash.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { LoaderInterceptor } from './shared/interceptor/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,13 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     CarouselModule ,
      InfiniteScrollModule
   ],
-  providers: [],
+  providers: [
+  {
+    provide:HTTP_INTERCEPTORS,
+    useClass:LoaderInterceptor,
+    multi:true
+  }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -28,3 +28,16 @@ $border-color:        #dee2e6;
 
 // Misc
 $card-shadow:         rgba(0, 0, 0, 0.05);
+
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(228, 192, 192, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
